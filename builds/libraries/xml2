@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Build Path: /app/.heroku/python/
+
+OUT_PREFIX=$1
+
+echo "Building XML2..."
+
+
+SOURCE_TARBALL='ftp://xmlsoft.org/libxml2/libxml2-2.7.8.tar.gz'
+
+curl $SOURCE_TARBALL | tar xz
+# jx
+mv libxml2-2.7.8 xml2
+
+cd xml2
+./configure --prefix=$OUT_PREFIX
+make
+make install
+
+# Cleanup
+cd ..
+rm -fr xml2
+~
