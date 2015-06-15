@@ -25,6 +25,35 @@ cp -r $ROOT_DIR $TMP_ROOT
 ROOT_DIR=$TMP_ROOT
 cd $ROOT_DIR
 
+echo "XXXXXXXXX1 DH XXXXXXXX"
+pwd
+ls -l
+echo "-----"
+echo $BUILD_DIR
+ls -l $BUILD_DIR
+echo "-----"
+echo $ROOT_DIR
+ls -l $ROOT_DIR
+echo "-----"
+echo $BIN_DIR
+ls -l  $BIN_DIR
+echo "-----"
+echo $CACHE_DIR
+ls -l  $CACHE_DIR
+echo "-----"
+echo $EVN_DIR
+ls -l  $ENV_DIR
+echo "-----"
+echo "ldd $BUILD_DIR/mgntest"
+ldd $BUILD_DIR/mgntest
+echo "-----"
+echo "ldd $BUILD_DIR/libDeIDTransformers.so"
+ldd $BUILD_DIR/libDeIDTransformers.so
+echo "XXXXXXXXX2 DH XXXXXXXX"
+
+
+
+
 # Cloud Foundry does not have support for Logplex.
 function bpwatch() {
   :
