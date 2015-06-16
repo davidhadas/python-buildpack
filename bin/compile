@@ -126,23 +126,6 @@ export PKG_CONFIG_PATH=/app/.heroku/vendor/lib/pkg-config:$BUILD_DIR/.heroku/ven
 # Switch to the repo's context.
 cd $BUILD_DIR
 
-
-echo "XXXXXXXXX1 DH XXXXXXXX"
-echo "-----> BUILD_DIR"
-echo $BUILD_DIR
-ls -al $BUILD_DIR
-echo "-----"
-echo $ROOT_DIR
-ls -al $ROOT_DIR
-echo "-----> ROOT_DIR"
-echo $BIN_DIR
-ls -al  $BIN_DIR
-echo "-----> CACHE_DIR"
-echo $CACHE_DIR
-ls -al  $CACHE_DIR
-echo "-----> ENV_DIR"
-echo $ENV_DIR
-ls -l  $ENV_DIR
 echo "----- mgntest"
 echo "ldd $BUILD_DIR/mgntest"
 ldd $BUILD_DIR/mgntest
