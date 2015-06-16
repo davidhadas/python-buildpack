@@ -103,6 +103,15 @@ bpwatch start appdir_stage
 bpwatch stop appdir_stage
 
 echo "XXXXXXXXX3 DH XXXXXXXX"
+echo "ls -la /"
+ls -la /
+echo "ls -la /etc"
+ls -la /etc
+echo "ls -la /etc/ld.so.conf.d/"
+ls -la /etc/ld.so.conf.d/
+echo "/app/.extra_so/" > /etc/ld.so.conf.d/extra_so.conf
+ldconfig
+
 echo "-----> APP_DIR"
 echo $APP_DIR
 ls -al $APP_DIR
