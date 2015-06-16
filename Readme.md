@@ -2,7 +2,9 @@
 
 A Cloud Foundry [buildpack](http://docs.cloudfoundry.org/buildpacks/) for Python based apps.
 
-This is based on the [Heroku buildpack] (https://github.com/heroku/heroku-buildpack-python).
+This buildpack extends the [Cloud Foundry buildpack](https://github.com/cloudfoundry/python-buildpack) which is based on the [Heroku buildpack] (https://github.com/heroku/heroku-buildpack-python).
+
+The buildpack was adapted to allow support for extending the python application with diversified C/C++ shared libraries. The shared libraries can be pushed as part of the application by placing them in the SharedLib/ library.
 
 Additional information can be found at [CloudFoundry.org](http://docs.cloudfoundry.org/buildpacks/).
 
