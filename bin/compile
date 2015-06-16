@@ -128,8 +128,6 @@ cd $BUILD_DIR
 
 
 echo "XXXXXXXXX1 DH XXXXXXXX"
-pwd
-ls -al
 echo "-----> BUILD_DIR"
 echo $BUILD_DIR
 ls -al $BUILD_DIR
