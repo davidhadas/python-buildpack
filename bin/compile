@@ -143,7 +143,7 @@ echo "-----> CACHE_DIR"
 echo $CACHE_DIR
 ls -al  $CACHE_DIR
 echo "-----> ENV_DIR"
-echo $EVN_DIR
+echo $ENV_DIR
 ls -l  $ENV_DIR
 echo "----- mgntest"
 echo "ldd $BUILD_DIR/mgntest"
