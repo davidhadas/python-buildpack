@@ -254,6 +254,13 @@ set-env ICC_ROOT '$BUILD_DIR/.so/icc'
 echo "XXXXXXXXX6 DH XXXXXXXX"
 
 
+echo "XXXXXXXXX1 DH XXXXXXXX"
+echo "----- mgntest"
+echo "ldd $BUILD_DIR/mgntest"
+ldd $BUILD_DIR/mgntest
+echo "XXXXXXXXX2 DH XXXXXXXX"
+
+
 # Install sane-default script for WEB_CONCURRENCY environment variable.
 cp $ROOT_DIR/vendor/python.webconcurrency.sh $WEBCONCURRENCY_PROFILE_PATH
 
@@ -286,12 +293,3 @@ bpwatch stop anvil_appdir_commit
 bpwatch stop compile
 
 rm -rf $TMP_ROOT
-
-echo "XXXXXXXXX1 DH XXXXXXXX"
-echo "----- mgntest"
-echo "ldd $BUILD_DIR/mgntest"
-ldd $BUILD_DIR/mgntest
-echo "----- libDeIDTransformers.so"
-echo "ldd $BUILD_DIR/libDeIDTransformers.so"
-ldd $BUILD_DIR/libDeIDTransformers.so
-echo "XXXXXXXXX2 DH XXXXXXXX"
