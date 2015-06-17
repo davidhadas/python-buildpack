@@ -147,23 +147,6 @@ export PKG_CONFIG_PATH=/app/.heroku/vendor/lib/pkg-config:$BUILD_DIR/.heroku/ven
 # Switch to the repo's context.
 cd $BUILD_DIR
 
-echo "XXXXXXXXX1 DH XXXXXXXX"
-set-env ICC_ROOT '$BUILD_DIR/.so/icc'
-echo "$ICC_ROOT"
-echo $ICC_ROOT
-echo "----- mgntest"
-echo "ldd $BUILD_DIR/mgntest"
-ldd $BUILD_DIR/mgntest
-echo "----- libDeIDTransformers.so"
-echo "ldd $BUILD_DIR/libDeIDTransformers.so"
-ldd $BUILD_DIR/libDeIDTransformers.so
-echo "XXXXXXXXX2 DH XXXXXXXX"
-
-
-
-
-
-
 # Experimental pre_compile hook.
 bpwatch start pre_compile
   source $BIN_DIR/steps/hooks/pre_compile
@@ -266,6 +249,13 @@ set-default-env LANG en_US.UTF-8
 set-default-env PYTHONHASHSEED random
 set-default-env PYTHONPATH /app/
 
+echo "XXXXXXXXX5 DH XXXXXXXX"
+set-env ICC_ROOT '$BUILD_DIR/.so/icc'
+echo "$ICC_ROOT"
+echo $ICC_ROOT
+echo "XXXXXXXXX6 DH XXXXXXXX"
+
+
 # Install sane-default script for WEB_CONCURRENCY environment variable.
 cp $ROOT_DIR/vendor/python.webconcurrency.sh $WEBCONCURRENCY_PROFILE_PATH
 
@@ -298,3 +288,14 @@ bpwatch stop anvil_appdir_commit
 bpwatch stop compile
 
 rm -rf $TMP_ROOT
+
+echo "XXXXXXXXX1 DH XXXXXXXX"
+echo "$ICC_ROOT"
+echo $ICC_ROOT
+echo "----- mgntest"
+echo "ldd $BUILD_DIR/mgntest"
+ldd $BUILD_DIR/mgntest
+echo "----- libDeIDTransformers.so"
+echo "ldd $BUILD_DIR/libDeIDTransformers.so"
+ldd $BUILD_DIR/libDeIDTransformers.so
+echo "XXXXXXXXX2 DH XXXXXXXX"
