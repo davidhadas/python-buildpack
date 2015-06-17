@@ -148,7 +148,7 @@ export PKG_CONFIG_PATH=/app/.heroku/vendor/lib/pkg-config:$BUILD_DIR/.heroku/ven
 cd $BUILD_DIR
 
 echo "XXXXXXXXX1 DH XXXXXXXX"
-set-env ICC_ROOT $BUILD_DIR/.so/icc
+set-env ICC_ROOT '$BUILD_DIR/.so/icc'
 echo "$ICC_ROOT"
 echo $ICC_ROOT
 echo "----- mgntest"
