@@ -119,13 +119,13 @@ ls -la /usr/local
 ls -la /etc
 echo "ls -la /etc/ld.so.conf.d/"
 ls -la /etc/ld.so.conf.d/
-echo "$APP_DIR/.extra_so/" > /etc/ld.so.conf.d/extra_so.conf
-echo "ls -la /etc/ld.so.conf.d/"
-ls -la /etc/ld.so.conf.d/
-echo "which ldconfig"
-which ldconfig
-echo "ldconfig"
-ldconfig
+#echo "$APP_DIR/.extra_so/" > /etc/ld.so.conf.d/extra_so.conf
+#echo "ls -la /etc/ld.so.conf.d/"
+#ls -la /etc/ld.so.conf.d/
+#echo "which ldconfig"
+#which ldconfig
+#echo "ldconfig"
+#ldconfig
 
 echo "XXXXXXXXX4 DH XXXXXXXX"
 
@@ -147,6 +147,10 @@ export PKG_CONFIG_PATH=/app/.heroku/vendor/lib/pkg-config:$BUILD_DIR/.heroku/ven
 # Switch to the repo's context.
 cd $BUILD_DIR
 
+echo "XXXXXXXXX1 DH XXXXXXXX"
+set-env ICC_ROOT $BUILD_DIR/.so/icc
+echo "$ICC_ROOT"
+echo $ICC_ROOT
 echo "----- mgntest"
 echo "ldd $BUILD_DIR/mgntest"
 ldd $BUILD_DIR/mgntest
