@@ -113,7 +113,7 @@ echo "ls -la /"
 ls -la /
 echo "ls -la /usr"
 ls -la /usr
-echo "ls -la /usr/local
+echo "ls -la /usr/local"
 ls -la /usr/local
 
 ls -la /etc
