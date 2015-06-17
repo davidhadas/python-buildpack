@@ -111,7 +111,11 @@ echo "id"
 id
 echo "ls -la /"
 ls -la /
-echo "ls -la /etc"
+echo "ls -la /usr"
+ls -la /usr
+echo "ls -la /usr/local
+ls -la /usr/local
+
 ls -la /etc
 echo "ls -la /etc/ld.so.conf.d/"
 ls -la /etc/ld.so.conf.d/
