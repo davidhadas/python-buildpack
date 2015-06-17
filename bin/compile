@@ -251,8 +251,6 @@ set-default-env PYTHONPATH /app/
 
 echo "XXXXXXXXX5 DH XXXXXXXX"
 set-env ICC_ROOT '$BUILD_DIR/.so/icc'
-echo "$ICC_ROOT"
-echo $ICC_ROOT
 echo "XXXXXXXXX6 DH XXXXXXXX"
 
 
@@ -290,8 +288,6 @@ bpwatch stop compile
 rm -rf $TMP_ROOT
 
 echo "XXXXXXXXX1 DH XXXXXXXX"
-echo "$ICC_ROOT"
-echo $ICC_ROOT
 echo "----- mgntest"
 echo "ldd $BUILD_DIR/mgntest"
 ldd $BUILD_DIR/mgntest
