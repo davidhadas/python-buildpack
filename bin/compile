@@ -109,7 +109,7 @@ ls -al $APP_DIR
 echo "-----> APP_DIR/so"
 ls -alr $APP_DIR/so
 echo "----->chmod 755  APP_DIR/so"
-chmod -R 755 so
+chmod -R 755 $APP_DIR/so
 echo "-----> APP_DIR/so"
 ls -alr $APP_DIR/so
 
