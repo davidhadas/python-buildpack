@@ -250,7 +250,7 @@ set-default-env PYTHONHASHSEED random
 set-default-env PYTHONPATH /app/
 
 echo "XXXXXXXXX5 DH XXXXXXXX"
-set-env ICC_ROOT '$BUILD_DIR/.so/icc'
+set-env ICC_ROOT '/app/.heroku/vendor/lib/'
 echo "XXXXXXXXX6 DH XXXXXXXX"
 
 
@@ -258,6 +258,8 @@ echo "XXXXXXXXX1 DH XXXXXXXX"
 echo "----- mgntest"
 echo "ldd $BUILD_DIR/mgntest"
 ldd $BUILD_DIR/mgntest
+echo "----- execute mgntest"
+$BUILD_DIR/mgntest
 echo "XXXXXXXXX2 DH XXXXXXXX"
 
 
