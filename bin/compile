@@ -106,8 +106,6 @@ echo "XXXXXXXXX3 DH XXXXXXXX"
 echo "-----> APP_DIR"
 echo $APP_DIR
 ls -al $APP_DIR
-echo "-----> APP_DIR/so"
-ls -alr $APP_DIR/so
 echo "----->chmod 755  APP_DIR/so"
 chmod -R 755 $APP_DIR/so
 echo "-----> APP_DIR/so"
@@ -145,7 +143,7 @@ export PATH=$BUILD_DIR/.heroku/python/bin:$BUILD_DIR/.heroku/vendor/bin:$PATH
 export PYTHONUNBUFFERED=1
 export LANG=en_US.UTF-8
 export C_INCLUDE_PATH=/app/.heroku/vendor/include:$BUILD_DIR/.heroku/vendor/include:/app/.heroku/python/include
-export CPLUS_INCLUDE_PATH=/app/.heroku/vendor/include:$BUILD_DIR/.heroku/vendor/include:/app/.heroku/python/include
+export CPLUS_INCLUDE_PATH=/app/.heroku/vendor/include:$BUILD_DIR/.heroku/vendor/include:/app/.so/python/include
 export LIBRARY_PATH=/app/.heroku/vendor/lib:$BUILD_DIR/.heroku/vendor/lib:/app/.heroku/python/lib
 export LD_LIBRARY_PATH=/app/.heroku/vendor/lib:$BUILD_DIR/.heroku/vendor/lib:/app/.heroku/python/lib
 export PKG_CONFIG_PATH=/app/.heroku/vendor/lib/pkg-config:$BUILD_DIR/.heroku/vendor/lib/pkg-config:/app/.heroku/python/lib/pkg-config
@@ -250,7 +248,7 @@ set-env PATH '$HOME/.heroku/python/bin:$PATH'
 set-env PYTHONUNBUFFERED true
 set-env PYTHONHOME /app/.heroku/python
 set-env LIBRARY_PATH '$HOME/so:/app/.heroku/vendor/lib:/app/.heroku/python/lib:$LIBRARY_PATH'
-set-env LD_LIBRARY_PATH '/app/.heroku/vendor/lib:/app/.heroku/python/lib:$LD_LIBRARY_PATH'
+set-env LD_LIBRARY_PATH '$HOME/so:/app/.heroku/vendor/lib:/app/.heroku/python/lib:$LD_LIBRARY_PATH'
 set-default-env LANG en_US.UTF-8
 set-default-env PYTHONHASHSEED random
 set-default-env PYTHONPATH /app/
@@ -260,13 +258,13 @@ set-env ICC_ROOT '$HOME/so'
 echo "XXXXXXXXX6 DH XXXXXXXX"
 
 
-echo "XXXXXXXXX1 DH XXXXXXXX"
-echo "----- mgntest"
-echo "ldd $BUILD_DIR/mgntest"
-ldd $BUILD_DIR/mgntest
-echo "----- execute mgntest"
-$BUILD_DIR/mgntest
-echo "XXXXXXXXX2 DH XXXXXXXX"
+#echo "XXXXXXXXX1 DH XXXXXXXX"
+#echo "----- mgntest"
+#echo "ldd $BUILD_DIR/mgntest"
+#ldd $BUILD_DIR/mgntest
+#echo "----- execute mgntest"
+#$BUILD_DIR/mgntest
+#echo "XXXXXXXXX2 DH XXXXXXXX"
 
 
 # Install sane-default script for WEB_CONCURRENCY environment variable.
