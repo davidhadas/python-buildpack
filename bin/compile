@@ -113,16 +113,16 @@ ls -alr $APP_DIR/so
 
 echo "id"
 id
-echo "ls -la /"
-ls -la /
-echo "ls -la /usr"
-ls -la /usr
-echo "ls -la /usr/local"
-ls -la /usr/local
-
-ls -la /etc
-echo "ls -la /etc/ld.so.conf.d/"
-ls -la /etc/ld.so.conf.d/
+#echo "ls -la /"
+#ls -la /
+#echo "ls -la /usr"
+#ls -la /usr
+#echo "ls -la /usr/local"
+#ls -la /usr/local
+#
+#ls -la /etc
+#echo "ls -la /etc/ld.so.conf.d/"
+#ls -la /etc/ld.so.conf.d/
 #echo "$APP_DIR/.extra_so/" > /etc/ld.so.conf.d/extra_so.conf
 #echo "ls -la /etc/ld.so.conf.d/"
 #ls -la /etc/ld.so.conf.d/
@@ -147,6 +147,7 @@ export CPLUS_INCLUDE_PATH=/app/.heroku/vendor/include:$BUILD_DIR/.heroku/vendor/
 export LIBRARY_PATH=/app/so:/app/.heroku/vendor/lib:$BUILD_DIR/.heroku/vendor/lib:/app/.heroku/python/lib
 export LD_LIBRARY_PATH=/app/so:/app/.heroku/vendor/lib:$BUILD_DIR/.heroku/vendor/lib:/app/.heroku/python/lib
 export PKG_CONFIG_PATH=/app/.heroku/vendor/lib/pkg-config:$BUILD_DIR/.heroku/vendor/lib/pkg-config:/app/.heroku/python/lib/pkg-config
+export ICC_ROOT='/app/so'
 
 # Switch to the repo's context.
 cd $BUILD_DIR
